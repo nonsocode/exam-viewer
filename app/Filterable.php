@@ -10,8 +10,10 @@ class Filterable extends Model
     	return $query->where('exam_year', $year);
     }
 
-    public function scopeType($query, $type)
+    public function scopeExamType($query, $type)
     {
+
     	return $query->whereExamType($type);
     }
+
 }
