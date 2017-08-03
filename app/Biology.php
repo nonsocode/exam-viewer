@@ -8,5 +8,4 @@ class Biology extends Filterable
 {
 	use Traits\Getters;
     protected $table = 'biology';
-
 }

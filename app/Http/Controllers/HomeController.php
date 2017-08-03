@@ -18,6 +18,7 @@ class HomeController extends Controller
     		$examYears = $model::groupBy('exam_year')->get();
     		foreach ($examYears as $exam) {
     			$exam->name = $subject;
+    			$exam->url = route('exam-view', [$exam->type, $subject, $exam->exam_year]);
     			$exams[] = $exam;
     		}
     	}
