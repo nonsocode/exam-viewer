@@ -13,6 +13,15 @@
                         </a>
                     @endforeach
                 </ul>
+                <ul class="list-group stats">
+                    
+                    @foreach ($counter as $subject => $count)
+                        <li>
+                            <div class="subject">{{$subject}}</div>
+                            <div class="count">{{$count}}</div>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>
