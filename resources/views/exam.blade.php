@@ -6,6 +6,13 @@
 			<h1 class="pull-left"><a href="/">Home</a></h1>
 			<h1 class="text-center">Questions</h1>
 		</div>
+		<div class="row">
+			<div class="text-center">
+				<div class="title-item">{{$type}}</div>
+				<div class="title-item">{{$subject}}</div>
+				<div class="title-item">{{$year}}</div>
+			</div>
+		</div>
 		@foreach ($questions as $question)
 			<div class="row">
 				<div class="col-xs-12">

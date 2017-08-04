@@ -10,8 +10,8 @@ class ExamController extends Controller
     public function index($type, $subject, $year)
     {
     	$model = "App\\$subject";
-    	$type = $type=='JAMB' ? "UTME" : $type;
-    	$questions = $model::year($year)->examType($type)->get();
-    	return view('exam')->with('questions',$questions);
+    	$modifiedType = $type=='JAMB' ? "UTME" : $type;
+    	$questions = $model::year($year)->examType($modifiedType)->get();
+    	return view('exam', compact('questions','type', 'subject','year'));
     }
 }
